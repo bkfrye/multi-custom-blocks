@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/multi-custom-blocks",
+	"version": "0.1.0",
+	"title": "Multi Custom Blocks",
+	"category": "widgets",
+	"description": "",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "create-block",
+	"editorScript": "file:../../../../build/multi-custom-blocks.js",
+	"editorStyle": "file:../../../../build/multi-custom-blocks.css",
+	"style": "file:../../../../build/style-multi-custom-blocks.css"
+}
