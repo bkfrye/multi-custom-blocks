@@ -25,3 +25,7 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+
+# Mac related hidden files
+.DS_Store
