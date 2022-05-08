@@ -1,0 +1,16 @@
+{
+	"apiVersion": 2,
+	"name": "multi-custom-blocks/image-card-section",
+	"version": "0.1.0",
+	"title": "Image Card Section",
+	"category": "media",
+	"description": "",
+	"supports": {
+		"html": false,
+		"multiple": false
+	},
+	"textdomain": "multi-custom-blocks",
+	"editorScript": "file:../../../../build/multi-custom-blocks.js",
+	"editorStyle": "file:../../../../build/multi-custom-blocks.css",
+	"style": "file:../../../../build/style-multi-custom-blocks.css"
+}

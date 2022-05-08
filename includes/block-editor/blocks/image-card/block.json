@@ -1,9 +1,9 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/multi-custom-blocks",
+	"name": "multi-custom-blocks/image-card",
 	"version": "0.1.0",
-	"title": "Multi Custom Blocks",
-	"category": "widgets",
+	"title": "Image Card",
+	"category": "media",
 	"description": "",
 	"supports": {
 		"html": false
