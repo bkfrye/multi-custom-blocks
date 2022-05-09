@@ -8,8 +8,12 @@
 
 .wp-block-multi-custom-blocks-image-card-section {
 	.wp-block-group {
-		display: flex;
-		justify-content: space-between;
+		
+
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+		}
 
 		.wp-block-multi-custom-blocks-image-card {
 			margin: 0 8px;
