@@ -5,8 +5,34 @@
  * Replace them with your own styles or remove the file completely.
  */
 
- .wp-block-create-block-multi-custom-blocks {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+
+.wp-block-multi-custom-blocks-image-card-section {
+	.wp-block-group {
+		display: flex;
+		justify-content: space-between;
+
+		.wp-block-multi-custom-blocks-image-card {
+			margin: 0 8px;
+
+			&:nth-child(1) {
+				margin-left: 0;
+			}
+			&:nth-last-child(1){
+				margin-right: 0;
+			}
+		}
+	}
 }
+
+.wp-block-multi-custom-blocks-image-card-section {
+	h2 {
+		font-family: sans-serif;
+		font-size: 21px;
+		font-weight: bold;
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+}
+
+
+
