@@ -262,9 +262,9 @@ const Edit = props => {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Write a description…', 'multi-custom-blocks'),
     value: description,
     onChange: onChangeDescription,
-    className: "description"
+    className: "image-card-description"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
-    className: "fake-btn",
+    className: "image-card-btn",
     tagName: "div",
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Placeholder text...', 'multi-custom-blocks'),
     value: btn,
@@ -378,7 +378,6 @@ const Save = props => {
     }
   } = props;
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save();
-  console.log(blockProps, props);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "image-card-item"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -386,7 +385,11 @@ const Save = props => {
     style: {
       backgroundImage: `url(${mediaURL})`
     }
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: mediaURL,
+    alt: "",
+    style: "display: none;"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
     tagName: "span",
     value: title
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
@@ -520,7 +523,7 @@ module.exports = JSON.parse('{"apiVersion":2,"name":"multi-custom-blocks/image-c
   \************************************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"apiVersion":2,"name":"multi-custom-blocks/image-card","version":"0.1.0","title":"Image Card","category":"media","description":"","supports":{"html":false},"attributes":{"title":{"type":"string","source":"html","selector":"h3"},"mediaID":{"type":"number"},"mediaURL":{"type":"string","source":"attribute","selector":"img","attribute":"src"},"description":{"type":"string","source":"html","selector":".description"},"btn":{"type":"string","source":"html","selector":".btn"}},"textdomain":"multi-custom-blocks","editorScript":"file:../../../../build/multi-custom-blocks.js","editorStyle":"file:../../../../build/multi-custom-blocks.css","style":"file:../../../../build/style-multi-custom-blocks.css"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"multi-custom-blocks/image-card","version":"0.1.0","title":"Image Card","category":"media","description":"","supports":{"html":false},"attributes":{"title":{"type":"string","source":"html","selector":"span"},"mediaID":{"type":"number"},"mediaURL":{"type":"string","source":"attribute","selector":"img","attribute":"src"},"description":{"type":"string","source":"html","selector":".image-card-description"},"btn":{"type":"string","source":"html","selector":".image-card-btn"}},"textdomain":"multi-custom-blocks","editorScript":"file:../../../../build/multi-custom-blocks.js","editorStyle":"file:../../../../build/multi-custom-blocks.css","style":"file:../../../../build/style-multi-custom-blocks.css"}');
 
 /***/ })
 

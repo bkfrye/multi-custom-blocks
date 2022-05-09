@@ -17,18 +17,8 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-image-card {
-  border: 1px dotted #f00;
-}
-
-.fake-btn {
-  border: 1px solid red;
-  display: inline-block;
-  padding: 1rem 3rem;
-}
-
-.editor-title {
-  font-size: 28px;
+p.image-card-description {
+  text-align: center;
 }
 
 /*# sourceMappingURL=multi-custom-blocks.css.map*/
