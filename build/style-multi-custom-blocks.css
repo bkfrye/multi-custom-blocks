@@ -7,10 +7,26 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-create-block-multi-custom-blocks {
-  background-color: #21759b;
-  color: #fff;
-  padding: 2px;
+.wp-block-multi-custom-blocks-image-card-section .wp-block-group {
+  display: flex;
+  justify-content: space-between;
+}
+.wp-block-multi-custom-blocks-image-card-section .wp-block-group .wp-block-multi-custom-blocks-image-card {
+  margin: 0 8px;
+}
+.wp-block-multi-custom-blocks-image-card-section .wp-block-group .wp-block-multi-custom-blocks-image-card:nth-child(1) {
+  margin-left: 0;
+}
+.wp-block-multi-custom-blocks-image-card-section .wp-block-group .wp-block-multi-custom-blocks-image-card:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.wp-block-multi-custom-blocks-image-card-section h2 {
+  font-family: sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 /*!***************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./includes/block-editor/blocks/image-card/style.scss ***!
@@ -34,7 +50,6 @@
 }
 
 .image-card-item {
-  max-width: 330px;
   width: 100%;
 }
 .image-card-item .image-card-background {
@@ -42,7 +57,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 2rem;
+  padding: 2rem 1.5rem 1.5rem;
   aspect-ratio: 3/4;
   width: 100%;
 }
@@ -56,7 +71,7 @@
 }
 .image-card-item .image-card-background h3 span {
   background: var(--red);
-  box-shadow: 0.25rem 0 0 var(--red), -2rem 0 0 var(--red);
+  box-shadow: 0.25rem 0 0 var(--red), -1.5rem 0 0 var(--red);
 }
 .image-card-item p.image-card-description {
   line-height: 1.4;

@@ -1,14 +1,3 @@
-/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./includes/block-editor/blocks/image-card-section/editor.scss ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************/
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
-.wp-block-image-card-section {
-  border: 1px dotted #f00;
-}
 /*!****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./includes/block-editor/blocks/image-card/editor.scss ***!
   \****************************************************************************************************************************************************************************************************************************************************************************/
@@ -17,8 +6,38 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-p.image-card-description {
+.wp-block-multi-custom-blocks-image-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-editor-block-list__block {
+  display: flex;
+}
+
+.image-card-description.rich-text {
   text-align: center;
+}
+
+.image-card-item .image-card-btn {
+  background-color: #fff;
+  border: 2px solid var(--red);
+  color: var(--red);
+  font-weight: bold;
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  transition: all 223ms ease-in-out;
+}
+.image-card-item .image-card-btn a {
+  border: 0;
+}
+.image-card-item .image-card-btn a:hover {
+  background-color: #fff;
+  color: var(--red);
+}
+
+.editor-card {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=multi-custom-blocks.css.map*/
