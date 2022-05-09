@@ -40,6 +40,15 @@
 			"selector": ".image-card-btn"
 		}
 	},
+	"example": {
+		"attributes": {
+			"title": "Card title goes here",
+			"mediaID": 1,
+			"mediaURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/320px-2ChocolateChipCookies.jpg",
+			"description": "description text goes here",
+			"btn": "<a href='www.google.com' target='_blank'>Button copy</a>"
+		}
+	},
 	"textdomain": "multi-custom-blocks",
 	"editorScript": "file:../../../../build/multi-custom-blocks.js",
 	"editorStyle": "file:../../../../build/multi-custom-blocks.css",
