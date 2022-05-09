@@ -4,6 +4,12 @@
 	"version": "0.1.0",
 	"title": "Image Card",
 	"category": "media",
+	"ancestor": [
+		"multi-custom-blocks/image-card-section"
+	],
+	"parent": [
+		"core/column"
+	],
 	"description": "",
 	"supports": {
 		"html": false
