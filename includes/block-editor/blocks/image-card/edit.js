@@ -39,10 +39,12 @@ const Edit = ( props ) => {
 		setAttributes( { btn: value } );
 	};
 
-	console.log(props)
-
 	return (
-		<div { ...blockProps } className="editor-card" style={{ margin: `0 4px`}}>
+		<div 
+			{ ...blockProps } 
+			className="editor-card" 
+			style={{ margin: `0 4px`}}
+		>
 			<MediaUpload
 				onSelect={ onSelectImage }
 				allowedTypes="image"
