@@ -44,6 +44,10 @@
 		}
 	}
 
+	.image-card-footer {
+		margin-top: 1rem;
+	}
+
 	p.image-card-description {
 		line-height: 1.4;
 		text-align: center;
@@ -61,6 +65,7 @@
 			padding: 0.25rem 1rem;
 			text-decoration: none;
 			transition: all 223ms ease-in-out;
+			white-space: nowrap;
 
 			&:hover {
 				background-color: var(--red);
