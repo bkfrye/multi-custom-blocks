@@ -4,17 +4,44 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-// .wp-block-image-card {
-// 	border: 1px dotted #f00;
-// }
+.wp-block-multi-custom-blocks-image-card {
+	display: flex;
+	flex-direction: column;
+}
+
+.block-editor-block-list__block {
+	display: flex;
+}
 
 
-
-
-// .editor-title {
-// 	font-size: 28px;
-// }
-
-p.image-card-description {
+.image-card-description.rich-text {
 	text-align: center;
 }
+
+.image-card-item {
+	.image-card-btn {
+		background-color: #fff;
+		border: 2px solid var(--red);
+		color: var(--red);
+		font-weight: bold;
+		padding: 0.25rem 1rem;
+		text-decoration: none;
+		transition: all 223ms ease-in-out;
+
+		& a {
+			border: 0;
+
+			&:hover {
+				background-color: #fff;
+				color: var(--red);
+			}
+		}
+	}
+}
+
+.editor-card {
+	margin-top: 0;
+}
+
+
+
