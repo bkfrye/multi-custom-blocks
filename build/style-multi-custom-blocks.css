@@ -7,9 +7,11 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-multi-custom-blocks-image-card-section .wp-block-group {
-  display: flex;
-  justify-content: space-between;
+@media (min-width: 768px) {
+  .wp-block-multi-custom-blocks-image-card-section .wp-block-group {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .wp-block-multi-custom-blocks-image-card-section .wp-block-group .wp-block-multi-custom-blocks-image-card {
   margin: 0 8px;
@@ -73,6 +75,9 @@
   background: var(--red);
   box-shadow: 0.25rem 0 0 var(--red), -1.5rem 0 0 var(--red);
 }
+.image-card-item .image-card-footer {
+  margin-top: 1rem;
+}
 .image-card-item p.image-card-description {
   line-height: 1.4;
   text-align: center;
@@ -89,6 +94,7 @@
   padding: 0.25rem 1rem;
   text-decoration: none;
   transition: all 223ms ease-in-out;
+  white-space: nowrap;
 }
 .image-card-item .image-card-btn a:hover {
   background-color: var(--red);
