@@ -1,1 +1,98 @@
-.wp-block-create-block-multi-custom-blocks{background-color:#21759b;color:#fff;padding:2px}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./includes/block-editor/blocks/image-card-section/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-multi-custom-blocks-image-card-section .wp-block-group {
+  display: flex;
+  justify-content: space-between;
+}
+.wp-block-multi-custom-blocks-image-card-section .wp-block-group .wp-block-multi-custom-blocks-image-card {
+  margin: 0 8px;
+}
+.wp-block-multi-custom-blocks-image-card-section .wp-block-group .wp-block-multi-custom-blocks-image-card:nth-child(1) {
+  margin-left: 0;
+}
+.wp-block-multi-custom-blocks-image-card-section .wp-block-group .wp-block-multi-custom-blocks-image-card:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.wp-block-multi-custom-blocks-image-card-section h2 {
+  font-family: sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./includes/block-editor/blocks/image-card/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+:root {
+  --red: #CC0000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wp-block-multi-custom-blocks-image-card {
+  width: 100%;
+}
+
+.image-card-item {
+  width: 100%;
+}
+.image-card-item .image-card-background {
+  background-color: darkgray;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 2rem 1.5rem 1.5rem;
+  aspect-ratio: 3/4;
+  width: 100%;
+}
+.image-card-item .image-card-background h3 {
+  color: white;
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin: 0;
+}
+.image-card-item .image-card-background h3 span {
+  background: var(--red);
+  box-shadow: 0.25rem 0 0 var(--red), -1.5rem 0 0 var(--red);
+}
+.image-card-item p.image-card-description {
+  line-height: 1.4;
+  text-align: center;
+}
+.image-card-item .image-card-btn {
+  margin: 2rem 1rem;
+  text-align: center;
+}
+.image-card-item .image-card-btn a {
+  background-color: #fff;
+  border: 2px solid var(--red);
+  color: var(--red);
+  font-weight: bold;
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  transition: all 223ms ease-in-out;
+}
+.image-card-item .image-card-btn a:hover {
+  background-color: var(--red);
+  color: #fff;
+}
+
+/*# sourceMappingURL=style-multi-custom-blocks.css.map*/

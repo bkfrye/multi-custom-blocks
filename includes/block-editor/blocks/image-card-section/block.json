@@ -5,6 +5,18 @@
 	"title": "Image Card Section",
 	"category": "media",
 	"description": "",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2"
+		},
+		"content": {
+			"type": "array",
+			"source": "children",
+			"selector": "image-card-item"
+		}
+	},
 	"supports": {
 		"html": false,
 		"multiple": false

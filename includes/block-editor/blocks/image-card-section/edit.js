@@ -1,40 +1,54 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
- */
-import { __ } from '@wordpress/i18n';
+import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
- */
-import { useBlockProps } from '@wordpress/block-editor';
+const ALLOWED_BLOCKS = [
+	'multi-custom-blocks/image-card',
+]
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-import './editor.scss';
+const BLOCKS_TEMPLATE = [
+	[ 'core/heading', { 
+			level: 3,
+			placeholder: 'Section Title',
+		}
+	],
+	[ 'core/group', {},
+		[
+			[ 'multi-custom-blocks/image-card', { 
+					"title": "Card title 1 goes here",
+					"mediaID": 1,
+					"mediaURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/320px-2ChocolateChipCookies.jpg",
+					"description": "description text goes here",
+					"btn": "<a href='www.google.com' target='_blank'>Button copy</a>"
+				} 
+			],
+			[ 'multi-custom-blocks/image-card', { 
+					"title": "Card title 1 goes here",
+					"mediaID": 1,
+					"mediaURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/320px-2ChocolateChipCookies.jpg",
+					"description": "description text goes here",
+					"btn": "<a href='www.google.com' target='_blank'>Button copy</a>"
+				} 
+			],
+			[ 'multi-custom-blocks/image-card', { 
+					"title": "Card title 1 goes here",
+					"mediaID": 1,
+					"mediaURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2ChocolateChipCookies.jpg/320px-2ChocolateChipCookies.jpg",
+					"description": "description text goes here",
+					"btn": "<a href='www.google.com' target='_blank'>Button copy</a>"
+				} 
+			]
+		]
+	]
+];
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
- * @return {WPElement} Element to render.
- */
-export default function Edit() {
+const Edit = () => {
+	const blockProps = useBlockProps();
 	return (
-		<p {...useBlockProps()}>
-			{__(
-				'Multi Custom Blocks – hello from the editor!',
-				'multi-custom-blocks'
-			)}
-		</p>
+		<div { ...blockProps } className="test-row">
+			<InnerBlocks 
+				template={ BLOCKS_TEMPLATE }
+				allowedBlocks= { ALLOWED_BLOCKS }
+			/>
+		</div>
 	);
-}
+};
+export default Edit;
