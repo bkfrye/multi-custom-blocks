@@ -1,40 +1,114 @@
 /**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
+ * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
+import { RichText, MediaUpload, useBlockProps } from '@wordpress/block-editor';
+import { Button, ExternalLink, Icon } from '@wordpress/components';
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
- */
-import { useBlockProps } from '@wordpress/block-editor';
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 import './editor.scss';
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#edit
- * @return {WPElement} Element to render.
- */
-export default function Edit() {
+const Edit = ( props ) => {
+	const {
+		attributes: { 
+			title, 
+			mediaID, 
+			mediaURL, 
+			description,
+			btn
+		},
+		setAttributes,
+	} = props;
+
+	const blockProps = useBlockProps();
+
+	const onChangeTitle = ( value ) => {
+		setAttributes( { title: value } );
+	};
+
+	const onSelectImage = ( media ) => {
+		setAttributes( {
+			mediaURL: media.url,
+			mediaID: media.id,
+		} );
+	};
+	const onChangeDescription = ( value ) => {
+		setAttributes( { description: value } );
+	};
+
+	const onChangeBtn = ( value ) => {
+		setAttributes( { btn: value } );
+	};
+
+	console.log(props)
+
 	return (
-		<p {...useBlockProps()}>
-			{__(
-				'Multi Custom Blocks – hello from the editor!',
-				'multi-custom-blocks'
-			)}
-		</p>
+		<div { ...blockProps } >
+			<MediaUpload
+				onSelect={ onSelectImage }
+				allowedTypes="image"
+				value={ mediaID }
+				render={ ( { open } ) => (
+					<>
+						<Button
+							className={
+								mediaID ? 'image-button' : 'button button-large'
+							}
+							onClick={ open }
+						>
+							{ ! mediaID ? (
+								__( 'Upload Image', 'multi-custom-blocks' )
+							) : (
+								__( 'Replace Image', 'multi-custom-blocks' )
+							) }
+						</Button>
+					</>
+				) }
+			/>
+			<div className="image-card-item">
+				<div 
+					className="image-card-background" 
+					style={{ backgroundImage: `url(${mediaURL})`}}
+				>
+					<h3>
+						<RichText
+							tagName="span"
+							placeholder={ __(
+								'Write card title…',
+								'multi-custom-blocks'
+							) }
+							value={ title }
+							onChange={ onChangeTitle }
+							className="editor-title"
+						/>
+					</h3>
+				</div>
+
+				<div className="image-card-footer">
+					<RichText
+						placeholder={ __(
+							'Write a description…',
+							'multi-custom-blocks'
+						) }
+						value={ description }
+						onChange={ onChangeDescription }
+						className="description"
+					/>
+					
+					{/* what is the best way to ensure URL is provided? */}
+					<RichText
+						className="fake-btn"
+						tagName="div"
+						placeholder={ __(
+							'Placeholder text...',
+							'multi-custom-blocks'
+						) }
+						value={ btn }
+						onChange={ onChangeBtn }
+					/>
+				</div>
+			</div>
+		</div>
 	);
-}
+};
+
+export default Edit;

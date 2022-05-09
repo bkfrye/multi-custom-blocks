@@ -1,34 +1,62 @@
 /**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
+ * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
+import { RichText, useBlockProps } from '@wordpress/block-editor';
+import { Button, Icon } from '@wordpress/components';
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
- */
-import { useBlockProps } from '@wordpress/block-editor';
+const IconRightArrow = () => (
+	<Icon
+		icon={ () => (
+			<svg viewBox="0 0 512 512">
+				<path d="M0,308.46H323.15L184.66,438.56,256,512,512,256,256,0,184.66,71.34l138.49,132.2H0Z"/>
+			</svg>
+		) }
+	/>
+);
 
-/**
- * The save function defines the way in which the different attributes should
- * be combined into the final markup, which is then serialized by the block
- * editor into `post_content`.
- *
- * @see https://developer.wordpress.org/block-editor/developers/block-api/block-edit-save/#save
- *
- * @return {WPElement} Element to render.
- */
-export default function save() {
+const Save = ( props ) => {
+	const {
+		attributes: { 
+			title, 
+			mediaURL, 
+			description,
+			btn
+		},
+	} = props;
+
+	const blockProps = useBlockProps.save();
+
+	console.log(blockProps, props);
 	return (
-		<p {...useBlockProps.save()}>
-			{__(
-				'Multi Custom Blocks – hello from the saved content!',
-				'multi-custom-blocks'
-			)}
-		</p>
+		<div { ...blockProps }>
+			<div className="image-card-item">
+				<div 
+					className="image-card-background" 
+					style={{ backgroundImage: `url(${mediaURL})`}}
+				>
+					<h3><RichText.Content 
+						tagName="span" 
+						value={ title } 
+					/></h3>
+				</div>
+				
+				<div className="image-card-footer">
+					<RichText.Content
+						tagName="p"
+						value={ description }
+						className="image-card-description"
+					/>
+
+					<RichText.Content
+						tagName="div"
+						value={ btn }
+						className="image-card-btn"
+					/>
+				</div>
+			</div>
+		</div>
 	);
-}
+};
+
+export default Save;

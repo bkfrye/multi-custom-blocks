@@ -8,7 +8,33 @@
 	"supports": {
 		"html": false
 	},
-	"textdomain": "create-block",
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "h3"
+		},
+		"mediaID": {
+			"type": "number"
+		},
+		"mediaURL": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "src"
+		},
+		"description": {
+			"type": "string",
+			"source": "html",
+			"selector": ".description"
+		},
+		"btn": {
+			"type": "string",
+			"source": "html",
+			"selector": ".btn"
+		}
+	},
+	"textdomain": "multi-custom-blocks",
 	"editorScript": "file:../../../../build/multi-custom-blocks.js",
 	"editorStyle": "file:../../../../build/multi-custom-blocks.css",
 	"style": "file:../../../../build/style-multi-custom-blocks.css"

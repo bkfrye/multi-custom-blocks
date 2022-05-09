@@ -5,8 +5,27 @@
  * Replace them with your own styles or remove the file completely.
  */
 
- .wp-block-create-block-multi-custom-blocks {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.image-card-item {
+	max-width: 33%;
+	width: 100%;
+
+	.image-card-background {
+		background-color: darkgray;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		padding: 2rem;
+
+		h3 {
+			color: white;
+			font-family: sans-serif;
+			font-size: 28px;
+			font-weight: bold;
+
+			span {
+				background-color: red;
+				padding: 8px 0;
+			}
+		}
+	}
 }
