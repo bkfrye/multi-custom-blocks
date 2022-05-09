@@ -12,7 +12,7 @@
 		"title": {
 			"type": "string",
 			"source": "html",
-			"selector": "h3"
+			"selector": "span"
 		},
 		"mediaID": {
 			"type": "number"
@@ -26,12 +26,12 @@
 		"description": {
 			"type": "string",
 			"source": "html",
-			"selector": ".description"
+			"selector": ".image-card-description"
 		},
 		"btn": {
 			"type": "string",
 			"source": "html",
-			"selector": ".btn"
+			"selector": ".image-card-btn"
 		}
 	},
 	"textdomain": "multi-custom-blocks",

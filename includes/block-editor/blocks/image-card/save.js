@@ -3,7 +3,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { RichText, useBlockProps } from '@wordpress/block-editor';
-import { Button, Icon } from '@wordpress/components';
+import { Icon } from '@wordpress/components';
 
 const IconRightArrow = () => (
 	<Icon
@@ -27,7 +27,7 @@ const Save = ( props ) => {
 
 	const blockProps = useBlockProps.save();
 
-	console.log(blockProps, props);
+	
 	return (
 		<div { ...blockProps }>
 			<div className="image-card-item">
@@ -35,6 +35,8 @@ const Save = ( props ) => {
 					className="image-card-background" 
 					style={{ backgroundImage: `url(${mediaURL})`}}
 				>
+					{/* need to use a different method to display backgroundImage */}
+					<img src={mediaURL} alt="" style="display: none;" /> 
 					<h3><RichText.Content 
 						tagName="span" 
 						value={ title } 

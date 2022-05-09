@@ -91,12 +91,12 @@ const Edit = ( props ) => {
 						) }
 						value={ description }
 						onChange={ onChangeDescription }
-						className="description"
+						className="image-card-description"
 					/>
 					
 					{/* what is the best way to ensure URL is provided? */}
 					<RichText
-						className="fake-btn"
+						className="image-card-btn"
 						tagName="div"
 						placeholder={ __(
 							'Placeholder text...',
